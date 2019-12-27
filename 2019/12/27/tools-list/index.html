@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zn-ch">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -9,10 +9,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/images/manifest.json">
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
@@ -21,11 +23,11 @@
   var CONFIG = {
     hostname: new URL('http://yoursite.com').hostname,
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     version: '7.6.0',
     exturl: false,
     sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
@@ -40,7 +42,7 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
@@ -50,13 +52,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用软件">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;27&#x2F;tools-list&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="PPIERO">
 <meta property="og:description" content="其他工具Velocity软件简介A Huge Documentation LibraryOver 150+ API documentation sets are available in Velocity covering some of the most popular languages and API frameworks that you use for everyday developm">
-<meta property="og:locale" content="zn_CH">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;velocity.silverlakesoftware.com&#x2F;Content&#x2F;VelocitySearchDemoOrig.gif">
-<meta property="article:published_time" content="2019-12-27T05:28:40.386Z">
-<meta property="article:modified_time" content="2019-12-27T05:28:40.386Z">
+<meta property="article:published_time" content="2019-12-27T09:12:31.252Z">
+<meta property="article:modified_time" content="2019-12-27T09:12:31.252Z">
 <meta property="article:author" content="PPIERO">
+<meta property="article:tag" content="软件">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;velocity.silverlakesoftware.com&#x2F;Content&#x2F;VelocitySearchDemoOrig.gif">
 
@@ -72,10 +75,19 @@
   };
 </script>
 
-  <title>常用软件 | Hexo</title>
+  <title>常用软件 | PPIERO</title>
   
 
 
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?15b9c4aeac5020465e9cd73aed3637fb";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -116,14 +128,14 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">PPIERO</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -137,47 +149,62 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">1</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">1</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
 
-    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>Schedule</a>
+    <a href="/schedule/" rel="section"><i class="fa fa-fw fa-calendar"></i>日程表</a>
 
   </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="fa fa-fw fa-sitemap"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>Commonweal 404</a>
-
-  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -200,17 +227,17 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zn-ch">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/27/tools-list/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar_01.jpg">
       <meta itemprop="name" content="PPIERO">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="若有风来便随风来，等风走">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="PPIERO">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -222,9 +249,20 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
 
-              <time title="Created: 2019-12-27 13:28:40" itemprop="dateCreated datePublished" datetime="2019-12-27T13:28:40+08:00">2019-12-27</time>
+              <time title="创建时间：2019-12-27 17:12:31" itemprop="dateCreated datePublished" datetime="2019-12-27T17:12:31+08:00">2019-12-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6/" itemprop="url" rel="index">
+                    <span itemprop="name">常用软件</span>
+                  </a>
+                </span>
             </span>
 
           
@@ -240,7 +278,8 @@
       
         <h1 id="其他工具"><a href="#其他工具" class="headerlink" title="其他工具"></a>其他工具</h1><h2 id="Velocity"><a href="#Velocity" class="headerlink" title="Velocity"></a>Velocity</h2><h3 id="软件简介"><a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h3><p>A Huge Documentation Library<br>Over 150+ API documentation sets are available in Velocity covering some of the most popular languages and API frameworks that you use for everyday development. If you’ve every seen or used Dash on the Mac then you have a good idea of what Velocity is except for Windows. The very same docsets you use in Dash are available with Velocity too.</p>
 <p><img src="https://velocity.silverlakesoftware.com/Content/VelocitySearchDemoOrig.gif" alt="pic"></p>
-<h3 id="下载链接："><a href="#下载链接：" class="headerlink" title="下载链接："></a>下载链接：</h3><blockquote>
+<a id="more"></a>
+<h3 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h3><blockquote>
 <p><a href="https://velocity.silverlakesoftware.com" target="_blank" rel="noopener">官网</a> <a href="https://pan.baidu.com/s/1nkS3NR9Hm3GGgeXfr0VfPw" target="_blank" rel="noopener">百度网盘</a>(提取码：06o8)</p>
 </blockquote>
 
@@ -249,8 +288,28 @@
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>PPIERO
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://yoursite.com/2019/12/27/tools-list/" title="常用软件">http://yoursite.com/2019/12/27/tools-list/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nd/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-ND</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag"># 软件</a>
+          </div>
 
         
 
@@ -258,8 +317,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/12/18/document-href/" rel="prev" title="文档收录">
-      <i class="fa fa-chevron-left"></i> 文档收录
+    <a href="/2019/12/27/font_awesome/" rel="prev" title="网站收录">
+      <i class="fa fa-chevron-left"></i> 网站收录
     </a></div>
       <div class="post-nav-item"></div>
     </div>
@@ -312,35 +371,66 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          站点概览
         </li>
       </ul>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#其他工具"><span class="nav-number">1.</span> <span class="nav-text">其他工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Velocity"><span class="nav-number">1.1.</span> <span class="nav-text">Velocity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#软件简介"><span class="nav-number">1.1.1.</span> <span class="nav-text">软件简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载链接："><span class="nav-number">1.1.2.</span> <span class="nav-text">下载链接：</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#其他工具"><span class="nav-number">1.</span> <span class="nav-text">其他工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Velocity"><span class="nav-number">1.1.</span> <span class="nav-text">Velocity</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#软件简介"><span class="nav-number">1.1.1.</span> <span class="nav-text">软件简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载链接"><span class="nav-number">1.1.2.</span> <span class="nav-text">下载链接</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="PPIERO"
+      src="/images/avatar_01.jpg">
   <p class="site-author-name" itemprop="name">PPIERO</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">若有风来便随风来，等风走</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yourname" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:ppiero@163.com" title="E-Mail → mailto:ppiero@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yourname" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://t.me/pierojbk" title="TG → https:&#x2F;&#x2F;t.me&#x2F;pierojbk" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i>TG</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nd/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nd.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
@@ -360,17 +450,14 @@
 
 <div class="copyright">
   
-  &copy; 
+  &copy; 2015 – 
   <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">PPIERO</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.1.1
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动
   </div>
 
         
@@ -398,7 +485,7 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/pisces.js"></script>
+<script src="/js/schemes/muse.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
@@ -409,6 +496,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
