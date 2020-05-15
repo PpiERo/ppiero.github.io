@@ -46,16 +46,18 @@
     path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
-  (function(){
-    if(''){
-      if (prompt("请输入文章密码:") !== ''){
-        alert("密码错误!");
-        history.back();
-      }
-    }
-  })();
+  
 </script>
-
+<script>
+(function(){
+  if(''){
+    if (prompt("请输入文章密码:") !== ''){
+      alert("密码错误!");
+      history.back();
+    }
+  }
+})();
+</script>
   <meta name="description" content="其他工具Velocity软件简介A Huge Documentation LibraryOver 150+ API documentation sets are available in Velocity covering some of the most popular languages and API frameworks that you use for everyday developm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用软件">

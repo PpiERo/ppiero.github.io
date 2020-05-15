@@ -46,16 +46,18 @@
     path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
   };
-  (function(){
-    if(''){
-      if (prompt("请输入文章密码:") !== ''){
-        alert("密码错误!");
-        history.back();
-      }
-    }
-  })();
+  
 </script>
-
+<script>
+(function(){
+  if(''){
+    if (prompt("请输入文章密码:") !== ''){
+      alert("密码错误!");
+      history.back();
+    }
+  }
+})();
+</script>
   <meta name="description" content="若有风来便随风来，等风走">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PPIERO">
@@ -247,7 +249,7 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-05-15T16:35:01+08:00"
+              datetime="2020-05-15T16:45:20+08:00"
               content="2020-05-15">
           05-15
         </time>
