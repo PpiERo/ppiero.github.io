@@ -19,17 +19,6 @@
 
 
 
-<script>
-(function(){
-  if('' != ''){
-    if (prompt("请输入文章密码:") !== ''){
-      alert("密码错误!");
-      console.log('')
-      history.back();
-    }
-  }
-})();
-</script>
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -61,15 +50,15 @@
   
 </script>
 
-  <meta name="description" content="文章加密访问">
+  <meta name="description" content="请输入密码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NexT主题修改">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;15&#x2F;P%E5%8F%94%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%B8%B8&#x2F;%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E8%AE%BF%E9%97%AE&#x2F;index.html">
 <meta property="og:site_name" content="PPIERO">
-<meta property="og:description" content="文章加密访问">
+<meta property="og:description" content="请输入密码">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-15T10:26:35.799Z">
-<meta property="article:modified_time" content="2020-05-15T10:26:35.799Z">
+<meta property="article:published_time" content="2020-05-15T10:50:24.794Z">
+<meta property="article:modified_time" content="2020-05-15T10:50:24.794Z">
 <meta property="article:author" content="PPIERO">
 <meta property="article:tag" content="Next">
 <meta name="twitter:card" content="summary">
@@ -262,7 +251,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-05-15 18:26:35" itemprop="dateCreated datePublished" datetime="2020-05-15T18:26:35+08:00">2020-05-15</time>
+              <time title="创建时间：2020-05-15 18:50:24" itemprop="dateCreated datePublished" datetime="2020-05-15T18:50:24+08:00">2020-05-15</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -287,14 +276,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="文章加密访问"><a href="#文章加密访问" class="headerlink" title="文章加密访问"></a>文章加密访问</h2><a id="more"></a>
-<p>打开themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig文件,在meta标签后面插入这样一段代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    (<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">if</span>(<span class="string">'&#123;&#123; page.password &#125;&#125;'</span> != <span class="string">''</span>)&#123;</span></span><br><span class="line"><span class="actionscript">            <span class="keyword">if</span> (prompt(<span class="string">"请输入文章密码:"</span>) !== <span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</span></span><br><span class="line"><span class="actionscript">            alert(<span class="string">"密码错误!"</span>);</span></span><br><span class="line">            </span><br><span class="line">            history.back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>然后文章中添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">password: mima</span><br></pre></td></tr></table></figure>
-<p>如果password后面为空，则表示不用密码。</p>
-
+        <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Hey, password is required here.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="547d5875fa181ebd4211ca487975a2c51ea5fb4b6d5f370adadaa55038d2f2e3">5fbcb7c334c5fac5cfa26342f6057d166fb7de2dbbd8fea835a42f6965de423ad91d42185ff06bec34a87f0d7aac7fc2b4b129c80f8513223da685e56571941e88efae7ba32a01a26a6ff8f92f48fbde90ab6561924a32b067413ee7c4c80571d911b0593e335b044a98ccfdb5e8664c013709c05a31a5950ef517fff1f1c33d4b2330f29db7e736eb84c02a98675a6a62295b0761777b7390b337ad3a898edc0e87769cdfdff5ed781a8bb6cb1fe4d927bc550a760644ca2063916580a6ad905ea69f81869d03007fb1bfc24d4fac8358bb1903161daead429ca277db0e6f74987ac655622b156f70172e3e83cea6a73089d4a787469480b9030b5dfce991e29a6cf34ea22a054500ebe91ff9de5a31fcf92fb0bb587abbe2125248421194056a6c33873465e5fa5c202c783896031252c4c670b85a1e52a00411b7c9abd63c245dad637c8fa87d99c762053f3783c018bd594168394d60b31925ee2371503d1492008d65eebe9cbcd11f9f987514581e6e4e668f03b048524c33e7dbb0088d35b0ec2f8c2e4362a2b9e54027e24fdb9443240e4963a426726005b45478a7e776ebb9e3bafae2ecb969d1f453c190422b9e0d9502cc08c5ea6e38386e58230a8e243196450d1894614890ef36086edd7050929d3c585715f33b21ab908e5def0fc4aa349e7ba465f919d1534931681f182aa13cfb91b0d7ac94448bd2be29a885537520d9af6624ba6d274735d3174d1583835d8de15c41fcc7f42149f235997e9ab7b34260f4ca7fba176f51e778b461316ac6ee3c48d8f2c86807aef2ca5a1af8c04074a4a0a06195a1b8eb46416de4ec76bb55653f72639a578893d661e9c535fefb0ada25c1ceb977d69269ecb4ad3c08cd1ed4cb85c8a991ad1ebeec990ec773f349e7910a7072b03d61e90a991b65349c47e5aa79c15f76a5d15055ec564b0230a5c6120561ae2d259b45a65377e817e141cd160f16b013223667f076386f52fde3b900396b8d52ab0fc9ce56f5265857ff1a6464f055f887454dd228883f8a723c697ec482ed1d99d78bf1615abda90e0256898b572a942b1b4d3202982477f07cce963fa65e3e68ff4a835b0c77b7a3ec8ccec4b14888c18cceb7dcf77691431c6ce57532642dd84717efb732ecc9a43b52b8145fb41eab5e261c6ad280c2d9cd0459b2049a22bfbf798638b255b2642e73abfbd2544fc5ce8c5e299547ffca04a1d0a644c704072e7b8543aa97a92dad974c2ab64f04930ef29af40c17032ab77c93ce9685edf4044fc9e5dddb160f9ba4d37a3daafdf60ebf63571131a9683b158904382327ff616c1aa496049caaa6b255d591f81af9c53e67d3bb3c4b13bb6b4978e16333e94608745c76b8e0762ddca3284f2db5095f520ea50f99b54437bc6813510973e45b42807a21a823ab2844230b4ba42debaba9999ec614291adaddc338cd126730dde9f5a1c552d17c1667f1dc675691dde9e7ee7bbde00c6207b8c576dece4d16b752fde20c1e2264aaa2526a20ac1e0106e4fefa21b2bece06695520515742d64c43669ceb2653c76930c38cec047e0c7ade1cbadc7d54a8a75969ea56ac7923f731d6e73728dae01c6133659708e393f94a6007d4994ef98a278dcff1a250ba1c46c659fcc0894b2eb92233a57c0723986479f20be3d1ad7cadf4e6fc0610f6db63c9d1203e81c35953eb8db0cf7401a1639cf9963ba748aa2c5a9d061c6d83009ff1578160c1e049b15fc5560a9312a9230a99d2e6363156347daff778f20623bf764288be6ffab3b9f5bcb0d0943f9f3077163b90dae28a247022a1ec7bc4debf64a8f75cecf9bb2f29ff102b60c26e689e15430eebc96eac992abedba5b9417b02bf72b37952906eace6a2b42ed96e0379d5a8b4096617083c5a891440e1e9c7212b22a98dba4acc16c224ada862dfbd848ddc15a92c5f1c3e6f3d6c85ef5c5f2689b8e89b00616604c8ba30f0b5ebbc1068ebe806ab4502b999f1bdd7d8ccf76e0eb4f1ea860d903fcb0b7215e1bd1722d5317af000ac5abf852e1a1198b9561dc57140444882c8a039a6543e68d140bcbe0b73972fa4015cbe34ded73801178753ee0b23f11de8ae80b241ebc2024a7e2351e1873dea1401c95288d39ebf6c6bb6272bffbe5db757d3b79b3b7d9d42707fe424cccfad150ab9f7bb246f31c2341c991ceb9a97248cbee5214b5432f65d4e41163274c4e65c7bdd1923707cf49d47ae6f31c1e12dec18acd1537998b86b12c0c5c539f1c979a176a33a9a4517442e02dde76f465551938d4b5d90ca009947ade1a06d542f116937294a855551158b02609e48a09ab6f804036e1c6421e436b051a85f3c63d235c372da1f330bff77e7bdda138ab3f4595c33986148f8f720d0bf41d64c6a9877ef86b7151250f1f51d0225cc8006d8a25fffbeb37f36e0a17eaabc46a818e25e22dd6f32db4c0c3fb091ddfc762ade92f996946b0b027f83a36943df68c7611ddb86ca59fc3b8361514ff30bc9bd605ce7f93e1e5d17da71576b31802b5771a896966ba3bd4778f40aca176c558d0147b0c15538664b139f62aced5e04e49014e5d5939cacb250f913ca973170697bd2dcb7ca4a2766f341a915d74d62e80b85fdb20c9b40d5d940fbda0800edf59bf576ad5455bd34a2a2e9ad86232e0b60c457b53e67ad53c75df989dd31f94bbbdb8f4ae74d4c828723dec34b49aba7132904843b65fa1847118f1fd45c7afe39a406071be2eeaacbde7b4ce12799fa264ae39101b9687fd91ae2f8a233f868dfdfcc9443ac0ae6f8d9aac34ed003bf6d07d1a590019b67d9ac719f2bd82ba3d1466708b6583b76774ba3de544f7ece19c17f6d17194b79144390160063803b67962fed358359059b05630e9838d3302501ce5aa515468923e55aec90f2e602f920ca6779de601683bad4536bef9287e7cbbf122782c5825c5a3cb25c035d9e2564680afee12e52d04d7b6e98495b228fb38cf00d7d58f08a4cd73fec1b3582862343a575e7fd8ef735e574e9966c4ca518d1103cb9b5fbc7016dac08b72fcdfb7d62140251fbe97e2ed9d9e43638c98990d58ecd02e7331f367c2ab3635d7360dd25e6d561ee8298485b8e1016ab00a274fd8cd6d4b8da32ede7a67690d131e713b538b33e75f01165483cedb1e2b2897dfa57d1882226654b2d071e69728f0968c8989ec2e384539f3d8ae072767ec259f784185c342a6e9101d8937b591dc15266465a9262fa99c09799b30cd8f70a311cd2b66f5d0ea9413ceee6723d4f3339baada0178b8f7bf54bdd136c6abf97cef30420575f7efa269d0ef9a659520cafb3a00de90c87d011e22a3724b86d1ca200ace9acbc447671415b6ada77581f37a194c929292d0c1b19db38aa4c85a941a1915b57084e2d3b73bb99ee81e09426fff17f2dcd553c5bcce301ba0f1910d10b87b690cb91e33e8eed6119966c19fb5fd77a2ea0f2dbe23a1f7027a2e0027f09dbab5d3e9001f4313e9e2a80c913acbf436639316d5e33e8b68d4141b8f829b80fcf1812d84ee48d27b9391fa3bf24c2ad491d794fb2ba037bb7925a321e43f04160d205b42a079ed66f6b9a6eca7a5a3e81c9823aca7314e16dda3c67e17638514bc2526eac0e9594a1c00b116e551a25d00b8dc7ae2e8de0a2e7b8014ec09cd4eba4d0a25a046734dedc85a928c2407aaf4dabaa5645750c584e33819f35c143b03871e2518acb27c99c02240a49900d5ce5c1b2c10bef919941677172f26df5e568c0a3518614c74940df03d70726688ce3b0e0d7ddcb90c82832dc696778e0e45429b9b4610cb3e64395eae077794e768e7c5e3e6da3729c66034e9a827fc638f2717968af53bb9ea84b91790a40fbd39957877f5234874e7f6775dabe622462978cde677b0b4f89191c5ab410a6a7cce23fcb99b91a8524e5884cb04b0adc3e6dfe330d1d1468810b987e42391caa4e4791c559173c31f8643ac8c15a03bcc7868ee451ecc8c5449a550cf8a5cfeb6fd2374b8f64755b1e378d7c8249623d372d983a3cae0b9c869592bfde88260a9fe0b0cd61a18980b5cada689cea97b0c133b5fc6e4fa1f695447551d2106fe0b303f9ed152f2d587c354c3ddb5740f9f14c14f475374293bdd090272990bad9648c7ed9ad4a862d3cfd53a9d4a960a89ea628270095d6b4138b3f786ef6056ce211de6ea15ddb7cf9869011d56823b84bf4bf215fbc728b2b502974882d4de543ba69bee1ba7bee2d5f1a5207cebd22180131a9b92ca57cf12800dfa015e23fa540966cbbcdfa660614747a3b24fbe4a1f0f344381e6dce89393549a2cd5b6e269c1f1257e530feabad7283d8cbf71d1d37535177b463c7ad0f59e7af47f43391ae2d5d2e20a71027d1dfa7cc699c517e46a2ce7bf99da6dbfd6ef8b9ebd99695414d856c641c7b63f447ce3ef2dc0d33ef7a68d60fb8234820fb1a1704ed3ac95060bb430dc5aa5cae72632f7763faac766e25203668ff79cf01ba4ecdf0e6ef58bbee9b900b80b78b00ef2002e2db5d91e63e33a426bdc86432ac6d1ec6fba23b2e29050ccb9eb9db808a37d470f4aefc13099f0fbcb125e8c01f9c87ca690e2be5356cab700080159319feddbbd6c043fea2f63d6081e3659c267d4037ec587e9a547e442e4336369bc5ed82b7a4acd578c05ed979edaaed3b3296fb102b91f64967169c45215445e5728411fd1de966e1b33ff3961abceddb27186e2f0cd5fc03d1486fe0a613ab5099433a45123398d1dbd21cefee695a8229dfdf195ae9c3b76ad804b95f9c2719696374343b0816375c87c2e82dea2599d20065ecf9b70e06168696</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
     </div>
 
     
@@ -392,7 +382,6 @@
     
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文章加密访问"><span class="nav-number">1.</span> <span class="nav-text">文章加密访问</span></a></li></ol></div>
       </div>
       <!--/noindex-->
    
