@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>README</title>
+    <url>/2020/05/15/README/</url>
+    <content><![CDATA[<h1 id="这是一个八百年不更新的博客"><a href="#这是一个八百年不更新的博客" class="headerlink" title="这是一个八百年不更新的博客"></a>这是一个八百年不更新的博客</h1>]]></content>
+  </entry>
+  <entry>
+    <title>基于Electron+Vue+Element UI的项目 Day01</title>
+    <url>/2020/05/15/eve_day01/</url>
+    <content><![CDATA[<h1 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 如果你没有vue-cli的话需要全局安装</span></span><br><span class="line">npm install -g vue-cli</span><br><span class="line"><span class="meta">#</span><span class="bash"> 然后使用vue-cli来安装electron-vue的模板</span></span><br><span class="line">vue init simulatedgreg/electron-vue my-project</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 安装依赖</span></span><br><span class="line">cd my-project</span><br><span class="line">yarn</span><br><span class="line"><span class="meta">#</span><span class="bash"> 进入开发模式</span></span><br><span class="line">yarn run dev # or yarn run dev</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+<h2 id="引入Element-ui"><a href="#引入Element-ui" class="headerlink" title="引入Element ui"></a>引入Element ui</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yarn add element-ui</span><br></pre></td></tr></table></figure>
+<p><strong>main.js文件</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 略</span></span><br><span class="line"><span class="keyword">import</span> ElementUI <span class="keyword">from</span> <span class="string">'element-ui'</span></span><br><span class="line"><span class="comment">// 略</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'element-ui/lib/theme-chalk/index.css'</span></span><br><span class="line"><span class="comment">// 略</span></span><br><span class="line">Vue.use(ElementUI)</span><br></pre></td></tr></table></figure>
+
+<p><strong>修改LandingPage.vue测试element-ui</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-container</span> <span class="attr">style</span>=<span class="string">"height: 500px; border: 1px solid #eee"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-aside</span> <span class="attr">width</span>=<span class="string">"200px"</span> <span class="attr">style</span>=<span class="string">"background-color: rgb(238, 241, 246)"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-menu</span> <span class="attr">:default-openeds</span>=<span class="string">"['1', '3']"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-submenu</span> <span class="attr">index</span>=<span class="string">"1"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">el-menu-item</span> <span class="attr">index</span>=<span class="string">"1-1"</span>&gt;</span>选项1<span class="tag">&lt;/<span class="name">el-menu-item</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">el-submenu</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">el-menu</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-aside</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-container</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-header</span> <span class="attr">style</span>=<span class="string">"text-align: right; font-size: 12px"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-header</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-main</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">"tableData"</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"date"</span> <span class="attr">label</span>=<span class="string">"日期"</span> <span class="attr">width</span>=<span class="string">"140"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"name"</span> <span class="attr">label</span>=<span class="string">"姓名"</span> <span class="attr">width</span>=<span class="string">"120"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"address"</span> <span class="attr">label</span>=<span class="string">"地址"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">el-main</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-container</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-container</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  data() &#123;</span><br><span class="line"><span class="actionscript">    <span class="keyword">const</span> item = &#123;</span></span><br><span class="line"><span class="actionscript">      date: <span class="string">"2016-05-02"</span>,</span></span><br><span class="line"><span class="actionscript">      name: <span class="string">"王小虎"</span>,</span></span><br><span class="line"><span class="actionscript">      address: <span class="string">"上海市普陀区金沙江路 1518 弄"</span></span></span><br><span class="line">    &#125;;</span><br><span class="line"><span class="actionscript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      tableData: <span class="built_in">Array</span>(<span class="number">5</span>).fill(item)</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-class">.el-header</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">background-color</span>: <span class="selector-id">#b3c0d1</span>;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">color</span>: <span class="selector-id">#333</span>;</span></span><br><span class="line">  line-height: 60px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="css"><span class="selector-class">.el-aside</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">color</span>: <span class="selector-id">#333</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="奇葩问题"><a href="#奇葩问题" class="headerlink" title="奇葩问题"></a>奇葩问题</h1><h2 id="eslint问题"><a href="#eslint问题" class="headerlink" title="eslint问题"></a>eslint问题</h2><p><strong>vscode 设置</strong></p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"files.autoSave":"off",</span><br><span class="line">"eslint.validate": [</span><br><span class="line">   "javascript",</span><br><span class="line">   "javascriptreact",</span><br><span class="line">   "html",</span><br><span class="line">   &#123; <span class="attr">"language"</span>: <span class="string">"vue"</span>, <span class="attr">"autoFix"</span>: <span class="literal">true</span> &#125;</span><br><span class="line"> ],</span><br><span class="line"> "eslint.options": &#123;</span><br><span class="line">    "plugins": ["html"]</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p><strong>.eslintignore文件</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">test&#x2F;unit&#x2F;coverage&#x2F;**</span><br><span class="line">test&#x2F;unit&#x2F;*.js</span><br><span class="line">test&#x2F;e2e&#x2F;*.js</span><br><span class="line">&#x2F;build&#x2F;</span><br><span class="line">&#x2F;config&#x2F;</span><br><span class="line">&#x2F;dist&#x2F;</span><br><span class="line">&#x2F;node_modules&#x2F;</span><br><span class="line">&#x2F;src&#x2F;</span><br><span class="line">&#x2F;*.js</span><br></pre></td></tr></table></figure>
+
+<h2 id="vue使用v-for时vscode报错-Elements-in-iteration-expect-to-have-‘v-bind-key’-directives"><a href="#vue使用v-for时vscode报错-Elements-in-iteration-expect-to-have-‘v-bind-key’-directives" class="headerlink" title="vue使用v-for时vscode报错 Elements in iteration expect to have ‘v-bind:key’ directives"></a>vue使用v-for时vscode报错 Elements in iteration expect to have ‘v-bind:key’ directives</h2><blockquote>
+<p> 解决方法：</p>
+</blockquote>
+<ol>
+<li><p>在<code>v-for</code> 后添加 <code>:key=&#39;item&#39;</code></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"i in list"</span> <span class="attr">:key</span>=<span class="string">"i"</span>&gt;</span> <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span> <span class="attr">v-for</span>=<span class="string">"(user,index) in datalist"</span> <span class="attr">:key</span>=<span class="string">'index'</span> &gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>在build处关闭eslint检测<br>…(config.dev.useEslint ? [createLintingRule()] : []),</p>
+</li>
+<li><p>更改vetur配置 vscode-&gt;首选项-&gt;设置-&gt;搜索（vetur）<br>“vetur.validation.template”: true,<br>改成：false</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>基于Electron+Vue+Element UI的项目</category>
+      </categories>
+      <tags>
+        <tag>electron</tag>
+        <tag>vue</tag>
+        <tag>element ui</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网站收录</title>
+    <url>/2019/12/27/font_awesome/</url>
+    <content><![CDATA[<h1 id="Font-Awesome"><a href="#Font-Awesome" class="headerlink" title="Font Awesome"></a>Font Awesome</h1><p><a href="https://www.thinkcmf.com/font_awesome.html" target="_blank" rel="noopener">链接</a></p>
+<div class="background_music">
+    <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src=""></iframe>
+</div>]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2015/01/01/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>文档收录</title>
+    <url>/2019/12/18/document-href/</url>
+    <content><![CDATA[<h2 id="Electron"><a href="#Electron" class="headerlink" title="Electron"></a>Electron</h2><p><a href="https://electronjs.org/docs" target="_blank" rel="noopener">Electron 文档</a></p>
+<h2 id="electron-vue"><a href="#electron-vue" class="headerlink" title="electron-vue"></a>electron-vue</h2><p><img src="https://simulatedgreg.gitbooks.io/electron-vue/content/images/logo.png" alt="electron-vue"></p>
+<p>简介： 该项目的目的，是为了要避免使用 vue 手动建立起 electron 应用程序。electron-vue 充分利用 vue-cli 作为脚手架工具，加上拥有 vue-loader 的 webpack、electron-packager 或是 electron-builder，以及一些最常用的插件，如vue-router、vuex 等等。</p>
+<p>文档链接：<a href="https://simulatedgreg.gitbooks.io/electron-vue/content/cn/" target="_blank" rel="noopener">electron-vue</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>常用软件</title>
+    <url>/2019/12/27/tools-list/</url>
+    <content><![CDATA[<h1 id="其他工具"><a href="#其他工具" class="headerlink" title="其他工具"></a>其他工具</h1><h2 id="Velocity"><a href="#Velocity" class="headerlink" title="Velocity"></a>Velocity</h2><h3 id="软件简介"><a href="#软件简介" class="headerlink" title="软件简介"></a>软件简介</h3><p>A Huge Documentation Library<br>Over 150+ API documentation sets are available in Velocity covering some of the most popular languages and API frameworks that you use for everyday development. If you’ve every seen or used Dash on the Mac then you have a good idea of what Velocity is except for Windows. The very same docsets you use in Dash are available with Velocity too.</p>
+<p><img src="https://velocity.silverlakesoftware.com/Content/VelocitySearchDemoOrig.gif" alt="pic"></p>
+<a id="more"></a>
+<h3 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h3><blockquote>
+<p><a href="https://velocity.silverlakesoftware.com" target="_blank" rel="noopener">官网</a> <a href="https://pan.baidu.com/s/1nkS3NR9Hm3GGgeXfr0VfPw" target="_blank" rel="noopener">百度网盘</a>(提取码：06o8)</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>常用软件</category>
+      </categories>
+      <tags>
+        <tag>软件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NexT主题修改</title>
+    <url>/2020/05/15/%E5%8D%9A%E5%AE%A2%E3%81%AE%E7%9E%8E%E5%BC%84%E6%97%A5%E5%B8%B8/%E6%96%87%E7%AB%A0%E5%8A%A0%E5%AF%86%E8%AE%BF%E9%97%AE/</url>
+    <content><![CDATA[<h2 id="文章加密访问"><a href="#文章加密访问" class="headerlink" title="文章加密访问"></a>文章加密访问</h2><a id="more"></a>
+<p>打开themes-&gt;next-&gt;layout-&gt;_partials-&gt;head.swig文件,在meta标签后面插入这样一段代码：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    (<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">if</span>(<span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</span></span><br><span class="line"><span class="actionscript">            <span class="keyword">if</span> (prompt(<span class="string">"请输入文章密码:"</span>) !== <span class="string">'&#123;&#123; page.password &#125;&#125;'</span>)&#123;</span></span><br><span class="line"><span class="actionscript">                alert(<span class="string">"密码错误!"</span>);</span></span><br><span class="line">                history.back();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>然后文章中添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">password: mima</span><br></pre></td></tr></table></figure>
+<p>如果password后面为空，则表示不用密码。</p>
+]]></content>
+      <categories>
+        <category>博客の瞎弄日常</category>
+      </categories>
+      <tags>
+        <tag>Next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>糊</title>
+    <url>/2020/05/15/P%E5%8F%94%E7%9A%84%E5%90%83%E7%93%9C%E6%97%A5%E5%B8%B8/%E7%B3%8A/</url>
+    <content><![CDATA[<img src = "https://raw.githubusercontent.com/PpiERo/PPic/master//img/1589447159_243169.png" class="full-image"/>
+]]></content>
+      <categories>
+        <category>P叔的吃瓜日常</category>
+      </categories>
+      <tags>
+        <tag>糊</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>预祝IU生日快乐(0516)</title>
+    <url>/2020/05/15/P%E5%8F%94%E7%9A%84%E8%BF%BD%E6%98%9F%E6%97%A5%E5%B8%B8/%E7%A5%9DIU%E7%94%9F%E6%97%A5%E5%BF%AB%E4%B9%90/</url>
+    <content><![CDATA[<h1 id="入坑知恩的契机"><a href="#入坑知恩的契机" class="headerlink" title="入坑知恩的契机"></a>入坑知恩的契机</h1><p>看了仁娜的《仁显王后的男人》<br>知道了她有个闺蜜IU…<br>然后听了那首《good day》<br>从此走上一条不归路<br>。。。。</p>
+<a id="more"></a>
+<p><img src="https://raw.githubusercontent.com/PpiERo/PPic/master/img/0067OQ4Tly1gdy8nolfo2j30rt15ogr6.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>P叔的追星日常</category>
+      </categories>
+      <tags>
+        <tag>IU</tag>
+      </tags>
+  </entry>
+</search>
