@@ -18,6 +18,16 @@
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
+<script>
+(function(){
+  if(''){
+    if (prompt("请输入文章密码:") !== ''){
+      alert("密码错误!");
+      history.back();
+    }
+  }
+})();
+</script>
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -48,16 +58,7 @@
   };
   
 </script>
-<script>
-(function(){
-  if(''){
-    if (prompt("请输入文章密码:") !== ''){
-      alert("密码错误!");
-      history.back();
-    }
-  }
-})();
-</script>
+
   <meta name="description" content="ElectronElectron 文档 electron-vue 简介： 该项目的目的，是为了要避免使用 vue 手动建立起 electron 应用程序。electron-vue 充分利用 vue-cli 作为脚手架工具，加上拥有 vue-loader 的 webpack、electron-packager 或是 electron-builder，以及一些最常用的插件，如vue-router、vu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文档收录">

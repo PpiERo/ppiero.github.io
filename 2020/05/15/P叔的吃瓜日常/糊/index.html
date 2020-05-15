@@ -18,6 +18,16 @@
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
+<script>
+(function(){
+  if(''){
+    if (prompt("请输入文章密码:") !== ''){
+      alert("密码错误!");
+      history.back();
+    }
+  }
+})();
+</script>
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -48,16 +58,7 @@
   };
   
 </script>
-<script>
-(function(){
-  if(''){
-    if (prompt("请输入文章密码:") !== ''){
-      alert("密码错误!");
-      history.back();
-    }
-  }
-})();
-</script>
+
   <meta property="og:type" content="article">
 <meta property="og:title" content="糊">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;15&#x2F;P%E5%8F%94%E7%9A%84%E5%90%83%E7%93%9C%E6%97%A5%E5%B8%B8&#x2F;%E7%B3%8A&#x2F;index.html">

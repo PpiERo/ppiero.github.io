@@ -18,6 +18,16 @@
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
+<script>
+(function(){
+  if(''){
+    if (prompt("请输入文章密码:") !== ''){
+      alert("密码错误!");
+      history.back();
+    }
+  }
+})();
+</script>
 <script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
@@ -48,16 +58,7 @@
   };
   
 </script>
-<script>
-(function(){
-  if(''){
-    if (prompt("请输入文章密码:") !== ''){
-      alert("密码错误!");
-      history.back();
-    }
-  }
-})();
-</script>
+
   <meta name="description" content="项目搭建12345678910# 如果你没有vue-cli的话需要全局安装npm install -g vue-cli# 然后使用vue-cli来安装electron-vue的模板vue init simulatedgreg&#x2F;electron-vue my-project# 安装依赖cd my-projectyarn# 进入开发模式yarn run dev # or yarn run dev">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于Electron+Vue+Element UI的项目 Day01">
